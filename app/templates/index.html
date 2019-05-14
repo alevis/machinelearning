@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"> {% if title %}
+  <title>{{title}}</title>
+  {% else %}
+  <title>Kiss Anime</title>
+  {% endif %}
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+  <link rel="stylesheet" \
+    type="text/css" href="{{ url_for('static', filename='css/master.css' ) }}" />
+  <link rel="stylesheet" \
+  href="{{url_for('bower.static',filename='font-awesome/css/font-awesome.min.css')}}"   />
+</head>
+<!-- body -->
+
+<body>
+  <!-- search bar  -->
+  <div class="box"> 
+		<ul class="bar">
+			<li class="anime_title">KAnime Videos</li>
+			<li><a href='#'>Home</a></li>
+			<li><a href='#'>About Us</a></li>
+			<li><input type="search" id="search" placeholder="Search for anime clips" />
+				<!-- <input type="submit" value="S" /> -->
+			</li>
+			<li>
+				<a href="#">
+				<span class="icon"><i class="fa fa-search fa-2x"></i></span> 
+				</a>
+			</li>
+		</ul>
+  </div>
+
+  <!-- video box  -->
+  <div class="grid">
+    <ul class="cards">
+	{% for video in videos %}
+      <li class="cards__item">
+        <div class="card">
+          <div class="card__image"></div>
+
+          <div class="card__content">
+            <br />
+            <div class="anime_title">{{ video.title }}</div>
+            <div class="anime_bar">
+              <span class="genre">{{ video.genre }}</span>
+              <br />
+              <span class="items">Seasons: </span>
+              <span class="current">{{ video.season }}</span>
+              <br />
+              <span class="items">Episodes: </span>
+              <span class="current">{{ video.episode }}</span>
+            </div>
+            <p class="anime_text">{{ video.description }}</p>
+            <button class="btn btn--block card__btn ">
+              <i class="fa fa-play fa-2x"></i>
+            </button>
+          </div>
+        </div>
+      </li>
+	{% endfor %}
+    </ul>
+  </div>
+  
+  <script scr=""></script>
+  <script scr="{{ url_for('static',filename='main.js') }}"></script>
+
+</body>
+</html>

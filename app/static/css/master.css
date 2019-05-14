@@ -1,0 +1,211 @@
+@font-face {
+  font-family: 'Barlow', 'Dosis', 'Lato', sans-serif;
+  src: url(https://fonts.googleapis.com/css?family=Barlow|Dosis|Lato);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  background-color: #441b36; /*#ac3939;*/
+}
+body {
+  /* color: #8ab475; */
+  font-family: 'Barlow', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  padding: 1rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
+}
+#video{
+  height=25%;
+  width=25%;
+}
+
+.bar li {
+  display: inline-block;
+  margin-left: 30px;
+  /*font-size: 20px;*/
+  color: orange;  
+}
+.bar {
+  position:sticky;
+  top: 0;
+  z-index: 100;
+  border-radius:30px;
+  background-color: #3f1f33; /*#5b9525; #259195;*/
+  padding: 20px;
+  margin-left:25px;
+  margin-right:25px;
+  border:1px solid  pink;
+}
+.bar li a {
+  text-decoration: none;
+  color: snow;
+}
+.logo {
+  color: white;
+  padding: 5px;
+  border: 5px solid white;
+}
+.bar li .primary {
+  color: SkyBlue;
+  border-bottom: 2px solid SkyBlue;
+}
+
+.box {
+  margin: 33px auto;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: snow;
+  border: 2px solid #cf5647;
+  border-radius: 0.1rem;
+  color: #aa3582;
+  padding: 0.5rem;
+  text-shadow: 0px 0px 6px #808080;
+  border-radius: 30px;
+}
+.btn--block {
+  display: block;
+  width: 100%;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.cards__item {
+  display: flex;
+  padding: 1rem;
+}
+@media (min-width: 40rem) {
+  .cards__item {
+    width: 50%;
+  }
+}
+@media (min-width: 56rem) {
+  .cards__item {
+    width: 33.3333%;
+  }
+}
+.card {
+  background-color: white;
+  border-radius: 2.25rem;
+  box-shadow: 0 20px 40px -14px pink; /*rgb(221, 103, 88);*/
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 7px;
+}
+.card:hover .card__image {
+  filter: contrast(100%);
+}
+.card__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 2rem;
+  background: #1d151a;
+}
+.card__image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  filter: contrast(55%);
+  /*overflow: hidden;*/
+  position: relative;
+  transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+ /* background-color: yellowgreen;*/
+}
+.card__image::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+@media (min-width: 40rem) {
+  .card__image::before {
+    padding-top: 66.6%;
+  }
+}
+.anime_title {  
+  font-family: 'Barlow', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-align: center;
+  font-size: 26px; 
+  letter-spacing: 1px;
+  text-shadow: 0px 2px 1px black;
+}
+div.anime_title{
+  color: wheat;
+  border:1px solid pink;
+  border-top: transparent;
+  /* border-bottom: transparent; */
+  border-radius: 3px; 
+  border-style: groove;  
+	
+  
+}
+li.anime_title{
+  font-weight: 900;
+}
+
+.genre {
+  color: gold;
+  /*! font-style: oblique; */
+  font-variant-caps: petite-caps;
+}
+.current {
+  color: gainsboro;
+}
+.items {
+  color: gold;
+  font-family: Hack , monospace;
+  font-size: 18px;
+  /*! font-style: oblique; */
+  font-variant-caps: petite-caps;
+}
+.anime_bar {
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 16px;
+  padding: 4px 2px 2px 2px;
+  margin: 2px 1px 2px 2px;
+  text-transform: lowercase;
+  text-shadow: 1px 1px 2px #808080;
+  font-style: oblique;
+  text-align:justify;
+}
+.anime_text {
+  flex: 1 1 55px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.875rem;
+  color: wheat;
+  line-height: 1.37;
+  margin-bottom: 1.77rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-damp: 3;
+  -webkit-box-orient: vertical;
+}
+#search{  
+  margin:5px;
+  height:35px;
+  border-radius: 15px;
+  text-align:center;
+}
+input[type=submit]{
+  font-size: 15px;  
+  border-radius:15px;  
+  padding:10px;
+  font-weight: 700;
+}
